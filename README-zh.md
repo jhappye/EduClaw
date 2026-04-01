@@ -100,6 +100,16 @@ GOOGLE_API_KEY=...
 GROK_API_KEY=xai-...
 ```
 
+### 2.5 首次运行前先安装依赖
+
+如果你看到 `next: not found` 或 `node_modules missing` 之类的报错，请先执行：
+
+```bash
+pnpm install
+```
+
+现在 EduClaw 会在 `pnpm dev`、`pnpm build`、`pnpm start` 前先做一次预检查；如果依赖未安装，会直接给出更明确的提示。
+
 也可以通过 `server-providers.yml` 配置服务商：
 
 ```yaml

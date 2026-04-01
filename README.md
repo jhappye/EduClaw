@@ -100,6 +100,16 @@ GOOGLE_API_KEY=...
 GROK_API_KEY=xai-...
 ```
 
+### 2.5 Install dependencies before first run
+
+If you see errors such as `next: not found` or `node_modules missing`, run:
+
+```bash
+pnpm install
+```
+
+EduClaw now performs a preflight check before `pnpm dev`, `pnpm build`, and `pnpm start`, and will print a clearer install hint if dependencies have not been installed yet.
+
 You can also configure providers via `server-providers.yml`:
 
 ```yaml

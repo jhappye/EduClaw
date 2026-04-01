@@ -46,6 +46,7 @@ import { toast } from 'sonner';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useDraftCache } from '@/lib/hooks/use-draft-cache';
 import { SpeechButton } from '@/components/audio/speech-button';
+import { BRAND_LOGO_PATH, BRAND_NAME, BRAND_TAGLINE } from '@/lib/constants/brand';
 
 const log = createLogger('Home');
 
@@ -494,8 +495,8 @@ function HomePage() {
       >
         {/* ── Logo ── */}
         <motion.img
-          src="/educlaw-logo.svg"
-          alt="EduClaw"
+          src={BRAND_LOGO_PATH}
+          alt={BRAND_NAME}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -686,7 +687,7 @@ function HomePage() {
 
       {/* Footer — flows with content, at the very end */}
       <div className="mt-auto pt-12 pb-4 text-center text-xs text-muted-foreground/40">
-        EduClaw · Campus-ready AI interactive classroom
+        {BRAND_NAME} · {BRAND_TAGLINE}
       </div>
     </div>
   );
