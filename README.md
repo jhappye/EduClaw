@@ -140,6 +140,8 @@ Open **http://localhost:3000** and start learning!
 pnpm build && pnpm start
 ```
 
+> `pnpm start` now auto-detects Next.js standalone output and falls back to `next start` when standalone is not present.
+
 ### Vercel Deployment
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FEduClaw&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FEduClaw%2Fblob%2Fmain%2F.env.example&project-name=educlaw&framework=nextjs)

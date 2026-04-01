@@ -13,7 +13,7 @@
     "prebuild": "node scripts/ensure-install.mjs",
     "build": "next build",
     "prestart": "node scripts/ensure-install.mjs",
-    "start": "next start",
+    "start": "node scripts/start-production.mjs",
     "lint": "eslint",
     "check": "prettier . --check",
     "format": "prettier . --write"

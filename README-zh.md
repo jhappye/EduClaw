@@ -140,6 +140,8 @@ pnpm dev
 pnpm build && pnpm start
 ```
 
+> 现在 `pnpm start` 会自动检测 Next.js standalone 输出；若不存在 standalone，则自动回退到 `next start`。
+
 ### Vercel 部署
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FEduClaw&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FEduClaw%2Fblob%2Fmain%2F.env.example&project-name=educlaw&framework=nextjs)
