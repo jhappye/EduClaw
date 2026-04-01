@@ -71,6 +71,13 @@
 
 完整模板见 `prompts.py`。
 
+另包含课堂调度器模板：
+
+- `ORCHESTRATOR_DECISION_SYSTEM`
+- `build_orchestrator_decision_user_prompt(...)`
+
+用于根据 `knowledge_point / understanding_level / task_done` 决定下一步动作（继续讲解/出题/讲错/互动/总结）。
+
 ## 4) 运行与集成
 
 该模块是可嵌入服务层的 Python 组件，不限制 HTTP 框架。可在现有 FastAPI 服务中直接调用：
@@ -85,4 +92,3 @@ event = await handle_live_chunk(
 ```
 
 > 说明：ASR 由 EduClaw 现有语音链路提供；这里以“模拟输入文本片段”完成实时互动闭环。
-

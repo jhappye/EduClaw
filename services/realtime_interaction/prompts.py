@@ -70,3 +70,48 @@ def build_class_summary_user_prompt(
 }}
 """
 
+
+ORCHESTRATOR_DECISION_SYSTEM = """
+你是课堂调度AI（Classroom Orchestrator）。
+你需要根据课堂进度动态决定下一步行动。
+你只能选择以下动作之一：
+1. 继续讲解
+2. 出一道题
+3. 讲解错误
+4. 提问互动
+5. 总结
+
+请严格输出 JSON：
+{
+  "action": "",
+  "reason": ""
+}
+不要输出 markdown，不要输出额外字段。
+"""
+
+
+def build_orchestrator_decision_user_prompt(
+    *,
+    knowledge_point: str,
+    understanding_level: str,
+    task_done: str,
+) -> str:
+    return f"""
+当前信息：
+- 当前知识点：{knowledge_point}
+- 学生理解度：{understanding_level}
+- 是否完成任务：{task_done}
+
+你可以选择以下动作：
+1. 继续讲解
+2. 出一道题
+3. 讲解错误
+4. 提问互动
+5. 总结
+
+请输出：
+{{
+  "action": "",
+  "reason": ""
+}}
+"""
