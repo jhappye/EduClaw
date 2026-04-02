@@ -134,7 +134,7 @@ pnpm dev
 
 Open **http://localhost:3000** and start learning!
 
-> `pnpm dev` now binds to `DEV_HOST=0.0.0.0` and `PORT=3000` by default, and exits if the port is occupied (instead of silently switching ports). You can override with `PORT=3001 pnpm dev`.
+> `pnpm dev` now binds to `DEV_HOST=0.0.0.0` and `PORT=3000` by default. If 3000 is occupied, it auto-selects the next free port and prints an explicit warning for reverse-proxy updates.
 
 ### 4. Build for Production
 
