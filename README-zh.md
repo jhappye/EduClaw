@@ -134,6 +134,8 @@ pnpm dev
 
 打开 **http://localhost:3000** 开始学习！
 
+> `pnpm dev` 默认绑定 `DEV_HOST=0.0.0.0`、`PORT=3000`，若端口被占用会直接退出（不再悄悄切换端口）。可通过 `PORT=3001 pnpm dev` 覆盖。
+
 ### 4. 生产环境构建
 
 ```bash
